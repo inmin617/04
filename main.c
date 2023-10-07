@@ -5,14 +5,17 @@
 
 int main(int argc, char *argv[])
 {
-	int a;
-	int b;
-	b=60;
+	int year;
 	
-	printf("input seconds:");
-	scanf("%i", &a);
+	printf("input a year: ");
+	scanf("%d", &year);
 	
-	printf("the time is %i:%i \n", a/b, a%b);
+	if((year%4==0 && year%100 !=0) || year%400==0)
+		printf("This is leap year\n");
+		
+	else
+		printf("This is not leap year\n");
+	
 	
 	
 	system("PAUSE");
